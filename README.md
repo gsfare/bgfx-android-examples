@@ -11,21 +11,22 @@ This project will assume you're on a Linux based host. Firstly clone the reposit
 
 Make sure you have SDK and NDK environment variables set correctly. It'll looks omething like this,
 
-export ANDROID_SDK_ROOT=~/Android/Sdk
-export ANDROID_NDK_ROOT=~/Android/Sdk/ndk/25.1.8937393
+`export ANDROID_SDK_ROOT=~/Android/Sdk`
+
+`export ANDROID_NDK_ROOT=~/Android/Sdk/ndk/25.1.8937393`
 
 Clone the repo using,
 
-git clone --recurse-submodules https://github.com/gsfare/bgfx-android-examples.git
+`git clone --recurse-submodules https://github.com/gsfare/bgfx-android-examples.git`
 
 ### Build BGFX dependencies.
 
-cd bgfx
-make android-arm64
+`cd bgfx-android-example/bgfx`
+`make android-arm64`
 
 ### Build the Android app.
 
-cd native-activity
-./gradlew assembleDebug
+`cd bgfx-android-example/native-activity`
+`./gradlew assembleDebug`
 
 Install as usual!
