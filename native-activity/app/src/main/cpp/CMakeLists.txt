@@ -18,9 +18,7 @@ cmake_minimum_required(VERSION 3.4.1)
 
 project(native-activity)
 
-add_library( examplesRelease
-        SHARED
-        IMPORTED )
+add_library( examplesRelease SHARED IMPORTED )
 
 set_target_properties( # Specifies the target library.
         examplesRelease
@@ -29,7 +27,7 @@ set_target_properties( # Specifies the target library.
         PROPERTIES IMPORTED_LOCATION
 
         # Provides the path to the library you want to import.
-        /home/garethf/Development/bgfx/bgfx/.build/android-arm64/bin/libexamplesRelease.so )
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../bgfx/.build/android-arm64/bin/libexamplesRelease.so )
 
 # build native_app_glue as a static lib
 set(${CMAKE_C_FLAGS}, "${CMAKE_C_FLAGS}")
@@ -50,5 +48,4 @@ target_include_directories(native-activity PRIVATE
         ${ANDROID_NDK}/sources/android/native_app_glue)
 
 # add lib dependencies
-target_link_libraries(native-activity
-        examplesRelease)
+target_link_libraries(native-activity examplesRelease)
