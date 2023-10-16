@@ -21,12 +21,10 @@ Clone the repo using,
 
 ### Build BGFX dependencies.
 
-`cd bgfx-android-example/bgfx`
-`make android-arm64`
+`cd bgfx-android-examples/bgfx && make android-arm64`
 
 ### Build the Android app.
 
-`cd bgfx-android-example/native-activity`
-`./gradlew assembleDebug`
+`cd bgfx-android-examples/native-activity && ./gradlew assembleDebug`
 
 Install as usual!
